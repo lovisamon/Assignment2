@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="WpfApp_MailClient.Views.CurrentMessageViewModel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp_MailClient.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="500">
+    
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            <Ellipse Width="100" Height="100" Margin="20,20,10,10" Fill="LightSteelBlue"/>
+            <StackPanel>
+                <TextBlock x:Name="tbTitle" Text="Title" FontSize="30" Margin="20,20,0,10"/>
+                <TextBlock x:Name="tbSender" Text="Sender" FontSize="20" FontStyle="Italic" Foreground="Gray" Margin="20,0,0,10"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <TextBlock x:Name="tbMessageContent" Text="lorum ipsum..." FontSize="20" Margin="20,0,20,10"/>
+        </Grid>
+
+    </Grid>
+
+</UserControl>
